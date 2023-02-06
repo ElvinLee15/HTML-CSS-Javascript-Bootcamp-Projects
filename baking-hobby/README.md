@@ -4,7 +4,7 @@ Produce web pages for a hobby of your choice.
 
 Task aim is to familiarise with the usage of sessionStorage to allow variables to remain stored between the switching of different web pages.
 
-#Project Instructions
+# Project Instructions
 
 The recipe pages includes the following features:
 
