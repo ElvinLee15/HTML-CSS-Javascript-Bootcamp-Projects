@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Link to .css file -->
+        <link rel="stylesheet" href="../stylesheet/baking.css">
+
+        <!-- Link to js file -->
+        <script src="../javascript/baking.js"></script>
+
+        <!-- Page title -->
+        <title>Pandan Cake Recipe</title>
+    </head>
+    <body onload="preLoadLists()">
+        <div class="recipeGridContainer">
+
+            <!-- Recipe Header -->
+            <header id="recipe1PageHeader" class="recipePageHeader">
+                <h1>Pandan Cake</h1>
+            </header>
+
+            <!-- Home Button -->
+            <a class="homeButton" href="../home.html">
+                <img class="homeButtonImage" src="../images/homeButton.png" alt="Home Button">
+            </a>
+
+            <!-- Recipe Image -->
+            <div class="recipeImageContainer">
+                <img class="recipeImage" src="../images/pandanCake.jpg" alt="Pandan Cake">
+            </div>
+
+            <!-- Recipe Instructions Section -->
+            <section class="recipeInstructionsSection">
+                <h2>Instructions</h2>
+                <ol class="recipeInstructions">
+
+                    <li>Preheat oven to <strong>170°C</strong>.</li>
+                    <li>Separate the <strong>egg yolk (5)</strong> and <strong>egg white (6)</strong> into separate bowls.</li>
+                    <li>In the bowl of the yolk add the <strong>sugar (32g)</strong>, <strong>milk (35g)</strong> and <strong>corn oil (25g)</strong>. Then whisk it well until well combined.</li>
+                    <li>Sift in <strong>flour (134g)</strong>, <strong>coconut milk powder (15g)</strong>, <strong>baking powder (1tsp)</strong> and <strong>salt (0.5g)</strong> to the yolk mixture, and whisk well until well combined. Then add <strong>4 drops of pandan extract</strong> and whisk until evenly coloured.</li>
+                    <li>Using a stand mixer/electric mixer beat the egg whites at <strong>low speed</strong> and add <strong>cream of tartar (½ tsp)</strong> after the egg whites have turned <strong>foamy</strong>. Then gradually add the <strong>sugar (68g)</strong> to the egg whites as it is whisked. Once all the sugar has been added you can increase the speed to <strong>high</strong> and whisk until you achieve <strong>stiff peaks</strong>.</li>
+                    <li>Fold <strong>¼ of your egg whites</strong> into the batter until well combined. Then pour the batter into your egg whites and fold until well combined.</li>
+                    <li>Pour your finished batter into the baking tin evenly, then use a skewer to help spread the batter evenly and get rid of air bubbles within the batter.</li>
+                    <li>Put it in the oven to bake, then after <strong>10 mins</strong> of baking reduce the temperature to <strong>165°C</strong> and bake for an extra <strong>10 mins</strong> to then finally reduce the temperature to <strong>155°C</strong> to bake for <strong>5 mins</strong>, making a total of <strong>25 mins</strong> baking time.</li>
+                    <li>Take the baking tin out of the oven and flip it upside down and place it on top of the bottom of a mug supporting the middle hole of the tin and cool for around <strong>10-15mins</strong>.</li>
+                    <li>Using a rubber spatula gently slide against the sides between the cake and tin and then from the side of the tin press the cake down to get it out onto a plate.</li>
+                    <li>Leave the cake for a day before serving to let the moisture and flavour distribute more evenly throughout the cake (optional).</li>
+                </ol>
+            </section>
+
+            <!-- Table of useful resources section -->
+            <section class="recipeUsefulResourcesSection">
+                <h2>Useful Resources</h2>
+
+                <table>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Description</th>
+                        <th>Hyperlink</th>
+                    </tr>
+
+                    <tr>   
+                        <td>Example Video</td>
+                        <td>Here is an example video of a similar recipe</td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=CzegqUL3m-g" target="_blank">Pandan Chiffon Cake Recipe</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </section>
+
+            <!-- Recipe Ingredients Section -->
+            <section class="recipeIngredientsSection">
+                <h2>Ingredients</h2>
+
+                <ul class="recipeIngredients">
+                    <li>134g Plain Flour</li>
+                    <li>25g Corn Oil</li>
+                    <li>35g Milk</li>
+                    <li>15g Coconut Milk Powder</li>
+                    <li>5 Large Egg Yolks</li>
+                    <li>6 Large Egg Whites</li>
+                    <li>1/2 tsp Cream of Tartar</li>
+                    <li>1 tsp Baking Powder</li>
+                    <li>Pandan Extract</li>
+                    <li>100g Caster Sugar</li>
+                    <li>0.5g Salt</li>
+                </ul>
+
+                <!-- Save Recipe Button -->
+                <button class="saveRecipeButton" onclick="saveRecipe()">Save Recipe</button>
+
+                <!-- Like Button -->
+                <button class="likeButton" id="likeButton" onclick="like()">Like</button>
+
+                <!-- Link to Saved Recipes Page -->
+                <button class="savedRecipesButton" onclick="window.location.href='savedRecipes.html'">Saved Recipes</button>
+            </section>
+
+            <section class="recipeReviewSection">
+                <h2>Comments</h2>
+                
+                <form>
+                    <textarea name="commentsInput" id="commentsInput" placeholder="Input your comment..." rows="5"></textarea>
+                    <input type="button" onclick="addComment()" value="Add Comment">
+                </form>
+
+                <ul id="commentList"></ul>
+
+            </section>
+
+            <!-- Recipe Rating section -->
+            <form class="recipeRating">
+                <p><b>What score will you give the recipe?</b></p>
+                <input type="radio" id="recipeRating5" name="recipeRating5" value="5">
+                <label for="recipeRating5">5. Very Good</label><br>
+
+                <input type="radio" id="recipeRating4" name="recipeRating4" value="4">
+                <label for="recipeRating4">4. Good</label><br>
+
+                <input type="radio" id="recipeRating3" name="recipeRating3" value="3">
+                <label for="recipeRating3">3. Ok</label><br>
+
+                <input type="radio" id="recipeRating2" name="recipeRating2" value="2">
+                <label for="recipeRating2">2. Bad</label><br>
+
+                <input type="radio" id="recipeRating1" name="recipeRating1" value="1">
+                <label for="recipeRating1">1. Very Bad</label><br><br>
+
+                <input type="submit" value="Submit Rating">
+            </form>
+
+                <!-- Contact Form -->
+                <div class="contactFormContainer">
+
+                    <h2>Contact us:</h2>
+    
+                    <form class="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+        
+                        <label for="fName">Email Address:</label>
+                        <input type="text" id="fName" name="firstName">
+        
+                        <label for="userMessage">Message:</label>
+                        <textarea name="userMessage" id="userMessage" rows="5" placeholder="Input your message..."></textarea>
+    
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+        </div>
+    </body>
+</html>

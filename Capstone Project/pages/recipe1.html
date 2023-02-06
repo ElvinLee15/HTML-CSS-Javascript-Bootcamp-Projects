@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Link to .css file -->
+        <link rel="stylesheet" href="../stylesheet/baking.css">
+
+        <!-- Link to js file -->
+        <script src="../javascript/baking.js"></script>
+
+        <!-- Page title -->
+        <title>Castella Cake Recipe</title>
+    </head>
+    <body onload="preLoadLists()">
+        <div class="recipeGridContainer">
+
+            <!-- Recipe Header -->
+            <header id="recipe1PageHeader" class="recipePageHeader">
+                <h1 id ="recipe1H1">Castella Cake</h1>
+            </header>
+
+            <!-- Home Button -->
+            <a class="homeButton" href="../home.html">
+                <img class="homeButtonImage" src="../images/homeButton.png" alt="Home Button">
+            </a>
+
+            <!-- Recipe Image -->
+            <div class="recipeImageContainer">
+                <img class="recipeImage" src="../images/castellaCake.jpg" alt="Castella Cake">
+            </div>
+
+            <!-- Recipe Instructions Section -->
+            <section class="recipeInstructionsSection">
+                <h2>Instructions</h2>
+                <ol class="recipeInstructions">
+                    <li>Preheat oven to <strong>150°C</strong> and prepare boiling water for the water bath (around 70°C)</li>
+                    <li>Line your baking tin with parchment paper on the bottom and the side in <strong> 2 sections</strong> separately. Make sure the <strong>side strip section is taller than your tin</strong> a bit allowing you to pull the cake out of the tin later after baking.</li>
+                    <li>Sift and combine the <strong>flour (71g)</strong> and <strong>cornstarch (29g)</strong> in a bowl.</li>
+                    <li>Separate the <strong>egg yolk (6)</strong> and <strong>egg white (6)</strong> into separate bowls.</li>
+                    <li>Melt and stir the butter in the milk in a saucepan at around <strong>70°C</strong> .</li>
+                    <li>Immediately after the milk and butter are fully emulsified, add it to your flour mixture and whisk well until well combined. Then add the <strong>egg yolks (6)</strong> to the batter and whisk well until well combined.</li>
+                    <li>Using a stand mixer/electric mixer beat the egg whites at <strong>low speed</strong> and add <strong>cream of tartar (½ tsp)</strong> after the egg whites have turned <strong>foamy</strong>. Then gradually add the <strong>sugar (100g)</strong> to the egg whites as it is whisked. Once all the sugar has been added you can increase the speed to <strong>high</strong> and whisk until you achieve <strong>stiff peaks</strong>.</li>
+                    <li>Fold <strong>¼ of your egg whites</strong> into the batter until well combined. Then pour the batter into your egg whites and fold until well combined.</li>
+                    <li>Pour your finished batter into the baking tin evenly, then use a skewer to help spread the batter evenly and get rid of air bubbles within the batter.</li>
+                    <li>Put the baking tin in the water bath and put it in the oven and bake for <strong>45-55mins</strong>.</li>
+                    <li>Take the cake out of the tin and let it cool for <strong>5-10mins</strong> and it is ready to be served when warm.</li>
+                </ol>
+            </section>
+
+            <!-- Table of useful resources section -->
+            <section class="recipeUsefulResourcesSection">
+                <h2>Useful Resources</h2>
+
+                <table>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Description</th>
+                        <th>Hyperlink</th>
+                    </tr>
+                    <tr>
+                        <td>Video</td>
+                        <td>Where recipe was originally from</td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=840D3AcTmcM" target="_blank">Taiwanese Castella Cake Recipe | Emojoie</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Recipe Ingredients Section -->
+            <section class="recipeIngredientsSection">
+                <h2>Ingredients</h2>
+
+                <ul class="recipeIngredients">
+                    <li>71g Plain Flour</li>
+                    <li>29g Corn Flour</li>
+                    <li>100g Unsalted Butter (Can be substituted with other oil like Corn Oil)</li>
+                    <li>100g Milk</li>
+                    <li>6 Large Egg Yolks</li>
+                    <li>6 Large Egg Whites</li>
+                    <li>1/2 tsp Cream of Tartar</li>
+                    <li>100g Caster Sugar</li>    
+                </ul>
+
+                <!-- Save Recipe Button -->
+                <button class="saveRecipeButton" onclick="saveRecipe()">Save Recipe</button>
+
+                <!-- Like Button -->
+                <button class="likeButton" id="likeButton" onclick="like()">Like</button>
+
+                <!-- Link to Saved Recipes Page -->
+                <button class="savedRecipesButton" onclick="window.location.href='savedRecipes.html'">Saved Recipes</button>
+
+            </section>
+
+            <section class="recipeReviewSection">
+                <h2>Comments</h2>
+                
+                <form>
+                    <textarea name="commentsInput" id="commentsInput" placeholder="Input your comment..." rows="5"></textarea>
+                    <input type="button" onclick="addComment()" value="Add Comment">
+                </form>
+
+                <ul id="commentList"></ul>
+
+            </section>
+
+            <!-- Recipe Rating section -->
+            <form class="recipeRating">
+                <p><b>What score will you give the recipe?</b></p>
+                <input type="radio" id="recipeRating5" name="recipeRating5" value="5">
+                <label for="recipeRating5">5. Very Good</label><br>
+
+                <input type="radio" id="recipeRating4" name="recipeRating4" value="4">
+                <label for="recipeRating4">4. Good</label><br>
+
+                <input type="radio" id="recipeRating3" name="recipeRating3" value="3">
+                <label for="recipeRating3">3. Ok</label><br>
+
+                <input type="radio" id="recipeRating2" name="recipeRating2" value="2">
+                <label for="recipeRating2">2. Bad</label><br>
+
+                <input type="radio" id="recipeRating1" name="recipeRating1" value="1">
+                <label for="recipeRating1">1. Very Bad</label><br><br>
+
+                <input type="submit" value="Submit Rating">
+            </form>
+
+            <!-- Contact Form -->
+            <div class="contactFormContainer">
+
+                <h2>Contact us:</h2>
+
+                <form class="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+    
+                    <label for="fName">Email Address:</label>
+                    <input type="text" id="fName" name="firstName">
+    
+                    <label for="userMessage">Message:</label>
+                    <textarea name="userMessage" id="userMessage" rows="5" placeholder="Input your message..."></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
