@@ -1,0 +1,254 @@
+/* Default font size */
+html{font-size: 100%;}
+
+/* Large Screens */
+@media only screen and (min-width:1200px){
+    .gridContainer{
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+    }
+    .periodicTableCells{
+        font-family: sans-serif;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+    /*Number Text Properties*/
+    
+    .chemicalGroupNumberVertical{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        padding-top: 2.5rem;
+        padding-left: 3rem;
+    }
+    
+    .chemicalGroupNumberHorizontalTop{
+        font-family: sans-serif;
+        font-weight:bold;
+        font-size: 0.75em;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    .chemicalGroupNumberHorizontal{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        text-align: center;
+        padding-top: 6rem;
+    }
+    
+    /*Element Text Properties*/
+    
+    .elementAtomicNumber{
+        font-size: 0.6em;
+    }
+    
+    .elementSymbol{
+        font-size: 0.8em;
+        font-weight:bold;
+    }
+    
+    .elementName{
+        font-size: 0.6em;
+    }
+    
+    .elementType{
+        font-size: 0.6em;
+    }
+    
+    #periodicTableImage{
+        display:none
+    }
+}
+
+/* Monitor/Laptop */
+@media only screen and (min-width:1024px) and (max-width:1200px){
+    .gridContainer{
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+    }
+    .periodicTableCells{
+        font-family: sans-serif;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+    /*Number Text Properties*/
+    
+    .chemicalGroupNumberVertical{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        padding-top: 2.5rem;
+        padding-right: 1em;
+    }
+    
+    .chemicalGroupNumberHorizontalTop{
+        font-family: sans-serif;
+        font-weight:bold;
+        font-size: 0.75em;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    .chemicalGroupNumberHorizontal{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        text-align: center;
+        padding-top: 6rem;
+    }
+    
+    /*Element Text Properties*/
+    
+    .elementAtomicNumber{
+        font-size: 0.6em;
+    }
+    
+    .elementSymbol{
+        font-size: 0.8em;
+        font-weight:bold;
+    }
+    
+    .elementName{
+        font-size: 0.6em;
+    }
+    
+    .elementType{
+        font-size: 0.6em;
+    }
+    
+    #periodicTableImage{
+        display:none
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .gridContainer{
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        gap: 4px;
+    }
+    .periodicTableCells{
+        font-family: sans-serif;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+    /*Number Text Properties*/
+    
+    .chemicalGroupNumberVertical{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .chemicalGroupNumberHorizontalTop{
+        font-family: sans-serif;
+        font-weight:bold;
+        font-size: 0.75em;
+        text-align: center;
+        padding-bottom: 0.5rem;
+    }
+    
+    .chemicalGroupNumberHorizontal{
+        font-family: sans-serif;
+        font-size: 0.75em;
+        font-weight:bold;
+        text-align: center;
+        padding-top: 1.5rem;
+    }
+    
+    /*Element Text Properties*/
+    
+    .elementAtomicNumber{
+        font-size: 0.6em;
+    }
+    
+    .elementSymbol{
+        font-size: 0.8em;
+        font-weight:bold;
+    }
+    
+    .elementName{
+        display:none;
+    }
+    
+    .elementType{
+        display:none;
+    }
+    
+    #periodicTableImage{
+        display:none
+    }
+}
+
+/* Mobile */
+@media only screen and (min-width:480px) and (max-width:768px){
+    .gridContainer{
+        display: none;
+    }
+    #periodicTableImage{
+        width: 100%;
+        height: auto;
+        padding-bottom: 5%;
+    }
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/*Element Chemical Type Colours*/
+
+.elementTypeNonMetal{
+    background-color: rgba(252, 252, 11, 0.4)
+}
+
+.elementTypeNobleGas{
+    background-color: rgba(255, 166, 0, 0.4)
+}
+
+.elementTypeHalogen{
+    background-color: rgba(252, 252, 11, 0.4)
+}
+
+.elementTypeAlkaliMetal{
+    background-color: rgba(252, 11, 11, 0.4)
+}
+
+.elementTypeAlkalineEarthMetal{
+    background-color: rgba(0, 0, 139, 0.4)
+}
+
+.elementTypeTransitionMetal{
+    background-color: rgba(19, 116, 226, 0.4)
+}
+
+.elementTypePostTransitionMetal{
+    background-color: rgba(28, 207, 73, 0.4)
+}
+
+.elementTypeMetalloid{
+    background-color: rgba(152, 251, 152, 0.4)
+}
+
+.elementTypeLanthanide{
+    margin-top: 1rem;
+    background-color: rgba(19, 183, 233, 0.4)
+}
+
+.elementTypeActinide{
+    background-color: rgba(77, 143, 182, 0.3)
+}
